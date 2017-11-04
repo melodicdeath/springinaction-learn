@@ -1,0 +1,22 @@
+group 'org.melodicdeath'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven { url 'http://maven.springframework.org/release' }
+    maven { url 'http://maven.springframework.org/milestone' }
+    maven { url 'http://maven.springframework.org/snapshot' }
+    maven { url 'http://download.java.net/maven/2' }
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework:spring-webmvc:4.3.12.RELEASE'
+    provided group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+    testCompile "org.springframework:spring-test:4.3.12.RELEASE"
+    testCompile group: 'org.testng', name: 'testng', version: '6.11'
+}
