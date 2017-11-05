@@ -17,14 +17,25 @@
           <element id="dir-copy" path="$PROJECT_DIR$/Chapter_05/out/production/resources" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.hibernate:hibernate-validator:5.0.1.Final" />
+          <element id="library" level="project" name="Gradle: org.apache.commons:commons-lang3:3.1" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.4.3" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.4.3" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-tx:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: javax.validation:validation-api:1.1.0.Final" />
+          <element id="library" level="project" name="Gradle: org.jboss.logging:jboss-logging:3.1.1.GA" />
+          <element id="library" level="project" name="Gradle: com.fasterxml:classmate:0.8.0" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.4.0" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-aop:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-beans:4.3.12.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-context:4.3.12.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-expression:4.3.12.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.springframework:spring-web:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-mapper-asl/1.9.13/1ee2f2bed0e5dd29d1cb155a166e6f8d50bbddb7/jackson-mapper-asl-1.9.13.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-core-asl/1.9.13/3c304d70f42f832e0a86d45bd437f692129299a4/jackson-core-asl-1.9.13.jar" />
         </element>
       </element>
     </root>
