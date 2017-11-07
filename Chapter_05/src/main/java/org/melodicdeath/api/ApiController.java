@@ -1,6 +1,9 @@
 package org.melodicdeath.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.Errors;
@@ -17,8 +20,11 @@ import java.io.UnsupportedEncodingException;
 @RestController
 @RequestMapping("/api")
 @Validated
+@Api(value = "测试api")
 public class ApiController {
 
+    @ApiOperation(value = "test", notes = "notes")
+    @ApiImplicitParam(name = "name", value = "姓名", required = true, dataType = "String")
     @GetMapping("/say/{name}")
     public @NotNull(message = "返回值不能为空")
     Message say(@PathVariable @Size(min = 1, max = 2,message = "长度必须为两个字符") String name) {
