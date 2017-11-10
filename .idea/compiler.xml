@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="Chapter_05_main" target="1.8" />
       <module name="Chapter_05_test" target="1.8" />
+      <module name="Chapter_08_main" target="1.8" />
+      <module name="Chapter_08_test" target="1.8" />
       <module name="springinaction-learn_main" target="1.8" />
       <module name="springinaction-learn_test" target="1.8" />
     </bytecodeTargetLevel>

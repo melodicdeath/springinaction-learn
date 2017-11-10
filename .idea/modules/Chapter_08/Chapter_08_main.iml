@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Chapter_08:main" external.linked.project.path="$MODULE_DIR$/../../../Chapter_08" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="org.melodicdeath" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/../../../Chapter_08/src/main/webapp/WEB-INF/spring/dataaccess.xml</file>
+          <file>file://$MODULE_DIR$/../../../Chapter_08/src/main/webapp/WEB-INF/spring/domain.xml</file>
+          <file>file://$MODULE_DIR$/../../../Chapter_08/src/main/webapp/WEB-INF/spring/flow.xml</file>
+          <file>file://$MODULE_DIR$/../../../Chapter_08/src/main/webapp/WEB-INF/spring/root-config.xml</file>
+          <file>file://$MODULE_DIR$/../../../Chapter_08/src/main/webapp/WEB-INF/spring/services.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web Gradle : Chapter_08-1.0-SNAPSHOT.war">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/../../../Chapter_08/src/main/webapp/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/../../../Chapter_08/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../../Chapter_08/out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../Chapter_08/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../../Chapter_08/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../Chapter_08/src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.springframework.webflow:spring-webflow:2.4.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.webflow:spring-js:2.4.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-webmvc:4.0.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.webflow:spring-binding:2.4.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-web:4.0.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-context:4.0.7.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.servlet:javax.servlet-api:3.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-aop:4.0.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-beans:4.0.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-expression:4.0.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-core:4.0.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.1.3" level="project" />
+    <orderEntry type="library" name="Gradle: opensymphony:ognl:2.6.11" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.webflow:spring-js-resources:2.4.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: aopalliance:aopalliance:1.0" level="project" />
+  </component>
+</module>

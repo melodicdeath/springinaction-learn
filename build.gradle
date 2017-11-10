@@ -15,4 +15,5 @@ repositories {
 
 dependencies {
     compile project(":Chapter_05")
+    compile project(":Chapter_08")
 }

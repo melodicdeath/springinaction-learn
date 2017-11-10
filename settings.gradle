@@ -1,3 +1,4 @@
 rootProject.name = 'springinaction-learn'
 include 'Chapter_05'
+include 'Chapter_08'
 

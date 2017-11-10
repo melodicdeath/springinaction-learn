@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Chapter_05/Chapter_05.iml" filepath="$PROJECT_DIR$/.idea/modules/Chapter_05/Chapter_05.iml" group="Chapter_05" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Chapter_05/Chapter_05_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Chapter_05/Chapter_05_main.iml" group="Chapter_05" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Chapter_05/Chapter_05_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Chapter_05/Chapter_05_test.iml" group="Chapter_05" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Chapter_08.iml" filepath="$PROJECT_DIR$/.idea/modules/Chapter_08.iml" group="Chapter_08" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08_main.iml" group="Chapter_08" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08_test.iml" group="Chapter_08" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springinaction-learn.iml" filepath="$PROJECT_DIR$/.idea/modules/springinaction-learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springinaction-learn_main.iml" filepath="$PROJECT_DIR$/.idea/modules/springinaction-learn_main.iml" group="springinaction-learn" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springinaction-learn_test.iml" filepath="$PROJECT_DIR$/.idea/modules/springinaction-learn_test.iml" group="springinaction-learn" />
