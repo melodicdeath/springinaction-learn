@@ -35,10 +35,13 @@
     <orderEntry type="library" name="Gradle: org.springframework.webflow:spring-webflow:2.4.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.webflow:spring-js:2.4.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-webmvc:4.0.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.1" level="project" />
+    <orderEntry type="library" name="Gradle: javax.servlet:jstl:1.2" level="project" />
+    <orderEntry type="library" name="Gradle: log4j:log4j:1.2.14" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.webflow:spring-binding:2.4.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-web:4.0.7.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-context:4.0.7.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.servlet:javax.servlet-api:3.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-context:4.0.7.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-aop:4.0.7.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-beans:4.0.7.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-expression:4.0.7.RELEASE" level="project" />
