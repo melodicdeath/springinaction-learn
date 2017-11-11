@@ -4,23 +4,27 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/webflow
   http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
-    <var name="order" class="org.melodicdeath.pizza.domain.Order"/>
-
-    <!-- Customer -->
-    <subflow-state id="customer" subflow="pizza/customer">
-        <input name="order" value="order"/>
-        <transition on="customerReady" to="order" />
-    </subflow-state>
+    <input name="order" required="true" />
 
     <!-- Order -->
-    <subflow-state id="order" subflow="pizza/order">
-        <input name="order" value="order"/>
-        <transition on="orderCreated" to="payment" />
-    </subflow-state>
+    <view-state id="showOrder">
+        <transition on="createPizza" to="createPizza" />
+        <transition on="checkout" to="orderCreated" />
+        <transition on="cancel" to="cancel" />
+    </view-state>
 
-    <!-- Payment -->
-    <subflow-state id="payment" subflow="pizza/payment">
-        <input name="order" value="order"/>
-        <transition on="paymentTaken" to="saveOrder"/>
-    </subflow-state>
+    <view-state id="createPizza" model="flowScope.pizza">
+        <on-entry>
+            <set name="flowScope.pizza" value="new org.melodicdeath.pizza.domain.Pizza()" />
+            <evaluate result="viewScope.toppingsList"
+                      expression="T(org.melodicdeath.pizza.domain.Topping).asList()" />
+        </on-entry>
+        <transition on="addPizza" to="showOrder">
+            <evaluate expression="order.addPizza(flowScope.pizza)" />
+        </transition>
+        <transition on="cancel" to="showOrder" />
+    </view-state>
+
+    <end-state id="cancel" />
+    <end-state id="orderCreated" />
 </flow>
