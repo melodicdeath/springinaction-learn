@@ -8,6 +8,9 @@ import org.springframework.http.MediaType;
 import org.springframework.validation.Errors;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spi.schema.ModelPropertyBuilderPlugin;
+import springfox.documentation.spi.schema.contexts.ModelPropertyContext;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
@@ -15,6 +18,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.UnsupportedEncodingException;
+import java.sql.Timestamp;
 
 @RestController
 @RequestMapping("/api")
@@ -49,12 +53,56 @@ public class ApiController {
         return message;
     }
 
+    @ApiOperation("test swagger response")
+    @GetMapping("/say4")
+    @ApiResponses(@ApiResponse(code = 200,message = "OK.",response = Data.class))
+    public Message say4(){
+        Message message = new Message();
+        message.setData(new Data());
+
+        return message;
+    }
+
+    @ApiModel(description = "data")
+    class Data{
+        private int id;
+        private String name;
+        @ApiModelProperty(dataType = "java.lang.String",example = "2014-10-10 01:00:00",required = true)
+        private Timestamp created;
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public Timestamp getCreated() {
+            return created;
+        }
+
+        public void setCreated(Timestamp created) {
+            this.created = created;
+        }
+    }
+
     @ApiModel(description = "消息对象消息对象消息对象")
     static class Message {
         @ApiModelProperty(value = "id", required = true)
         private int code;
         @ApiModelProperty(value = "消息", required = true)
         private String msg;
+        @ApiModelProperty("数据")
+        private Object data;
 
         public int getCode() {
             return code;
@@ -70,6 +118,14 @@ public class ApiController {
 
         public void setMsg(String msg) {
             this.msg = msg;
+        }
+
+        public Object getData() {
+            return data;
+        }
+
+        public void setData(Object data) {
+            this.data = data;
         }
     }
 

@@ -13,10 +13,14 @@ import springfox.documentation.schema.ModelRef;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.service.Parameter;
+import springfox.documentation.service.VendorExtension;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import springfox.documentation.swagger2.mappers.VendorExtensionsMapper;
+import springfox.documentation.swagger2.mappers.VendorExtensionsMapperImpl;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,7 +54,8 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage("org.melodicdeath"))
                 .apis(withClassAnnotation(Api.class))
                 .paths(PathSelectors.any())
-                .build();
+                .build()
+                .directModelSubstitute(Timestamp.class,String.class);
 //                .globalOperationParameters(setHeaderToken());
     }
 
