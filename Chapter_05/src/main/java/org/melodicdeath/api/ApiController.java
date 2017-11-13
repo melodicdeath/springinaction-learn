@@ -3,7 +3,7 @@ package org.melodicdeath.api;
 import com.fasterxml.classmate.ResolvedType;
 import com.fasterxml.classmate.TypeResolver;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.introspect.BeanPropertyDefinition;
+import com.fasterxml.jackson.databind.introspect.*;
 import com.google.common.base.Optional;
 import io.swagger.annotations.*;
 import org.hibernate.validator.constraints.NotBlank;
@@ -22,12 +22,11 @@ import springfox.documentation.service.ResolvedMethodParameter;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spi.schema.ModelBuilderPlugin;
 import springfox.documentation.spi.schema.ModelPropertyBuilderPlugin;
+import springfox.documentation.spi.schema.TypeNameProviderPlugin;
 import springfox.documentation.spi.schema.contexts.ModelContext;
 import springfox.documentation.spi.schema.contexts.ModelPropertyContext;
-import springfox.documentation.spi.service.OperationBuilderPlugin;
-import springfox.documentation.spi.service.ParameterBuilderPlugin;
-import springfox.documentation.spi.service.contexts.OperationContext;
-import springfox.documentation.spi.service.contexts.ParameterContext;
+import springfox.documentation.spi.service.*;
+import springfox.documentation.spi.service.contexts.*;
 import springfox.documentation.swagger.common.SwaggerPluginSupport;
 
 import javax.validation.ConstraintViolation;
@@ -73,12 +72,13 @@ public class ApiController {
         return message;
     }
 
-    @ApiOperation("test swagger response")
+    @ApiOperation(value = "test swagger response", extensions =
+            {@Extension(properties = @ExtensionProperty(name = "data", value = "Data.class"))})
     @GetMapping("/say4")
     @ApiModelPropertyReplaces(value = "data", targetType = Data.class)
-    @ApiResponses(@ApiResponse(code = 200, message = "OK."))
+    @ApiResponses(@ApiResponse(code = 200, message = "OK.",reference = "Data"))
     public Message say4(@VersionApi int version) {
-        Message message = new Message();
+        Message<Data> message = new Message<>(Data.class);
         message.setData(new Data());
 
         return message;
@@ -101,9 +101,8 @@ public class ApiController {
 
     @Component
     @Order(SwaggerPluginSupport.SWAGGER_PLUGIN_ORDER + 1000)
-    static class TypeReplace implements ModelPropertyBuilderPlugin, OperationBuilderPlugin {
+    class TypeReplace implements ModelPropertyBuilderPlugin,ModelBuilderPlugin {
         private TypeResolver resolver;
-        private static Optional<ApiController.ApiModelPropertyReplaces> apiModelPropertyReplacesOptional;
 
         public TypeReplace(TypeResolver resolver) {
             this.resolver = resolver;
@@ -111,12 +110,22 @@ public class ApiController {
 
         @Override
         public void apply(ModelPropertyContext context) {
-            if (apiModelPropertyReplacesOptional.isPresent()) {
-                BeanPropertyDefinition beanPropertyDefinition = context.getBeanPropertyDefinition().get();
-                if (beanPropertyDefinition.getName().equals(apiModelPropertyReplacesOptional.get().value())) {
-                    context.getBuilder().type(resolver.resolve(apiModelPropertyReplacesOptional.get().targetType())).build();
-                }
+            BeanPropertyDefinition beanPropertyDefinition = context.getBeanPropertyDefinition().get();
+//            ((AnnotatedClass) ((POJOPropertyBuilder) beanPropertyDefinition)._fields.value._typeContext)._fields
+//            for(AnnotatedMethod method : ((AnnotatedClass)beanPropertyDefinition.getField().getTypeContext()).memberMethods()){
+//                if(method.getName().equals("getClazz")){
+//                    try {
+//                        method.fixAccess(true);
+//                        System.out.println(method.call());
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }
+            if (beanPropertyDefinition.getName().equals("data")) {
+                context.getBuilder().type(resolver.resolve(Data.class)).build();
             }
+
         }
 
         @Override
@@ -125,9 +134,22 @@ public class ApiController {
         }
 
         @Override
-        public void apply(OperationContext context) {
-            apiModelPropertyReplacesOptional = context.findAnnotation(ApiModelPropertyReplaces.class);
+        public void apply(ModelContext context) {
+
         }
+
+//        @Override
+//        public void apply(OperationContext context) {
+//            apiModelPropertyReplacesOptional = context.findAnnotation(ApiModelPropertyReplaces.class);
+//        }
+
+//        @Override
+//        public void apply(RequestMappingContext context) {
+//            Optional<ApiController.ApiModelPropertyReplaces> apiModelPropertyReplacesOptional
+//                    = context.findAnnotation(ApiModelPropertyReplaces.class);
+//            int i = 0;
+//        }
+
     }
 
     @Component
@@ -190,13 +212,27 @@ public class ApiController {
     }
 
     @ApiModel(description = "消息对象消息对象消息对象")
-    static class Message {
+    class Message<T> {
         @ApiModelProperty(value = "id", required = true)
         private int code;
         @ApiModelProperty(value = "消息", required = true)
         private String msg;
         @ApiModelProperty("数据")
-        private Object data;
+        private T data;
+
+        private Class<T> clazz;
+
+        Message(Class<T> clazz) {
+            this.clazz = clazz;
+        }
+
+        public Class<T> getClazz() {
+            return clazz;
+        }
+
+        public void setClazz(Class<T> clazz) {
+            this.clazz = clazz;
+        }
 
         public int getCode() {
             return code;
@@ -214,11 +250,11 @@ public class ApiController {
             this.msg = msg;
         }
 
-        public Object getData() {
+        public T getData() {
             return data;
         }
 
-        public void setData(Object data) {
+        public void setData(T data) {
             this.data = data;
         }
     }
