@@ -8,19 +8,41 @@
 		http://www.springframework.org/schema/security
 		http://www.springframework.org/schema/security/spring-security.xsd">
     <security:http use-expressions="true">
-        <security:intercept-url pattern="/login" access="hasRole('ROLE_ANONYMOUS')"/>
+        <security:intercept-url pattern="/login" access="permitAll()"/>
         <security:intercept-url pattern="/**" access="hasRole('ROLE_USER')"/>
         <security:form-login login-page="/login" default-target-url="/"/>
         <security:logout/>
         <security:csrf disabled="true"/>
     </security:http>
 
-    <security:authentication-manager>
-        <security:authentication-provider>
-            <security:user-service>
-                <security:user name="ben" password="ben" authorities="ROLE_USER"/>
-            </security:user-service>
-        </security:authentication-provider>
+    <!--<security:authentication-manager>-->
+        <!--<security:authentication-provider>-->
+            <!--<security:user-service>-->
+                <!--<security:user name="ben" password="ben" authorities="ROLE_USER"/>-->
+            <!--</security:user-service>-->
+        <!--</security:authentication-provider>-->
+    <!--</security:authentication-manager>-->
+
+    <security:authentication-manager alias="authenticationManager">
+        <security:authentication-provider
+                user-service-ref="userDetailsService"/>
+        <!--select username, password, enabled from users where username=? &#45;&#45; 根据 username 查询用户信息-->
+        <!--select username, authority from authorities where username=? &#45;&#45; 根据 username 查询用户权限信息-->
+        <!--select g.id, g.group_name, ga.authority from groups g, groups_members gm, groups_authorities ga where gm.username=? and g.id=ga.group_id and g.id=gm.group_id &#45;&#45; 根据 username 查询用户组权限-->
     </security:authentication-manager>
+
+    <bean id="userDetailsService"
+          class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://120.26.213.143:3306/test?useUnicode=true&amp;characterEncoding=UTF8&amp;zeroDateTimeBehavior=convertToNull"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="1qaz@WSX"></property>
+    </bean>
+
+
 
 </beans>

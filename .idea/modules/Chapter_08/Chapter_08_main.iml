@@ -7,6 +7,7 @@
           <file>file://$MODULE_DIR$/../../../Chapter_08/src/main/webapp/WEB-INF/spring/dataaccess.xml</file>
           <file>file://$MODULE_DIR$/../../../Chapter_08/src/main/webapp/WEB-INF/spring/domain.xml</file>
           <file>file://$MODULE_DIR$/../../../Chapter_08/src/main/webapp/WEB-INF/spring/flow.xml</file>
+          <file>file://$MODULE_DIR$/../../../Chapter_08/src/main/webapp/WEB-INF/spring/mvc.xml</file>
           <file>file://$MODULE_DIR$/../../../Chapter_08/src/main/webapp/WEB-INF/spring/root-config.xml</file>
           <file>file://$MODULE_DIR$/../../../Chapter_08/src/main/webapp/WEB-INF/spring/services.xml</file>
         </fileset>
