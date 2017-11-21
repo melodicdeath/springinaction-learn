@@ -1,0 +1,42 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : org.melodicdeath : web-security-1.0-SNAPSHOT.war (exploded)">
+    <output-path>$PROJECT_DIR$/web-security/build/libs/exploded/web-security-1.0-SNAPSHOT.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$/web-security" />
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/web-security/build/libs/exploded/web-security-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="web-security_main/web/Web Gradle : web-security-1.0-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="web-security_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/web-security/out/production/resources" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.apache.commons:commons-lang3:3.1" />
+          <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.9.2" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-tx:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-core-asl:1.9.13" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.2" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/4.0.2.RELEASE/86f6306aa201a69d37e84fa556bd15cf79752591/spring-security-web-4.0.2.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/4.0.2.RELEASE/882132ed6a3282493145eb8c05b92c086af1b0f4/spring-security-config-4.0.2.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/4.0.2.RELEASE/10684511bee0456c5c111bb16b2dee138d33d2d6/spring-security-core-4.0.2.RELEASE.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="web-security_main/web/Web" />
+    </root>
+  </artifact>
+</component>

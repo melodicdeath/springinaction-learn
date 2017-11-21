@@ -11,6 +11,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springinaction-learn.iml" filepath="$PROJECT_DIR$/.idea/modules/springinaction-learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springinaction-learn_main.iml" filepath="$PROJECT_DIR$/.idea/modules/springinaction-learn_main.iml" group="springinaction-learn" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springinaction-learn_test.iml" filepath="$PROJECT_DIR$/.idea/modules/springinaction-learn_test.iml" group="springinaction-learn" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-security.iml" filepath="$PROJECT_DIR$/.idea/modules/web-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-security_main.iml" filepath="$PROJECT_DIR$/.idea/modules/web-security_main.iml" group="web-security" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-security_test.iml" filepath="$PROJECT_DIR$/.idea/modules/web-security_test.iml" group="web-security" />
     </modules>
   </component>
 </project>
