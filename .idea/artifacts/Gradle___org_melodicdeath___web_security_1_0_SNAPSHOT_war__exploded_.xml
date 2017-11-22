@@ -24,6 +24,7 @@
           <element id="library" level="project" name="Gradle: org.springframework:spring-tx:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-web:4.0.2.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-config:4.0.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: mysql:mysql-connector-java:5.1.36" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-core-asl:1.9.13" />
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
@@ -37,7 +38,6 @@
           <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/5.1.36/6bb5861f44c21c775ee713a438e5bc493c095f7a/mysql-connector-java-5.1.36.jar" />
         </element>
       </element>
     </root>
