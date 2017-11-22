@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+
+spring:
+#  datasource:
+#    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/oauth2?useUnicode=true&characterEncoding=utf-8
+#    username: root
+#    password: root
+#    driver-class-name: net.sf.log4jdbc.DriverSpy
+  redis:
+    host: 120.26.213.143
+    database: 3
+    password: melodicdeath
+    port: 6378
+#  jpa:
+#    hibernate:
+#      ddl-auto: none
+
+#logging:
+#  level:
+#    jdbc: error
+#    jdbc.sqltiming: info
+
+#security:
+#  oauth2:
+#    resource:
+#      filter-order: 3

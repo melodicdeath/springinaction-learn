@@ -8,13 +8,17 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08.iml" filepath="$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08.iml" group="Chapter_08" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08_main.iml" group="Chapter_08" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08_test.iml" group="Chapter_08" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/oauth2/oauth2.iml" filepath="$PROJECT_DIR$/.idea/modules/oauth2/oauth2.iml" group="oauth2" />
       <module fileurl="file://$PROJECT_DIR$/oauth2.iml" filepath="$PROJECT_DIR$/oauth2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oauth232.iml" filepath="$PROJECT_DIR$/oauth232.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/oauth2/oauth2_main.iml" filepath="$PROJECT_DIR$/.idea/modules/oauth2/oauth2_main.iml" group="oauth2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/oauth2/oauth2_test.iml" filepath="$PROJECT_DIR$/.idea/modules/oauth2/oauth2_test.iml" group="oauth2" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springinaction-learn.iml" filepath="$PROJECT_DIR$/.idea/modules/springinaction-learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springinaction-learn_main.iml" filepath="$PROJECT_DIR$/.idea/modules/springinaction-learn_main.iml" group="springinaction-learn" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springinaction-learn_test.iml" filepath="$PROJECT_DIR$/.idea/modules/springinaction-learn_test.iml" group="springinaction-learn" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-security.iml" filepath="$PROJECT_DIR$/.idea/modules/web-security.iml" group="web-security" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-security_main.iml" filepath="$PROJECT_DIR$/.idea/modules/web-security_main.iml" group="web-security" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-security_test.iml" filepath="$PROJECT_DIR$/.idea/modules/web-security_test.iml" group="web-security" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-security/web-security.iml" filepath="$PROJECT_DIR$/.idea/modules/web-security/web-security.iml" group="web-security" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-security/web-security_main.iml" filepath="$PROJECT_DIR$/.idea/modules/web-security/web-security_main.iml" group="web-security" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-security/web-security_test.iml" filepath="$PROJECT_DIR$/.idea/modules/web-security/web-security_test.iml" group="web-security" />
     </modules>
   </component>
 </project>
