@@ -1,5 +1,6 @@
 package org.melodicdeath.oauth2.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -22,13 +23,21 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //                .and()
 //                .withUser("user_2").password("123456").authorities("USER");
 //    }
-//
+
+    @Autowired
+    UserDetailsService userDetailsService;
+
 //    @Bean
 //    @Override
 //    public AuthenticationManager authenticationManagerBean() throws Exception {
 //        AuthenticationManager manager = super.authenticationManagerBean();
 //        return manager;
 //    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService);
+    }
 
     @Bean
     @Override

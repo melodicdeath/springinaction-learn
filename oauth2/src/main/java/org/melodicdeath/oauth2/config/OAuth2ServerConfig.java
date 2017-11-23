@@ -73,6 +73,8 @@ public class OAuth2ServerConfig {
                     .authorizedGrantTypes("password", "refresh_token")
                     .scopes("select")
                     .authorities("client")
+                    .accessTokenValiditySeconds(10)
+                    .refreshTokenValiditySeconds(3600)
                     .secret("123456");
         }
 

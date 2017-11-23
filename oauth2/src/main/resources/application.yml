@@ -13,6 +13,7 @@ spring:
     database: 3
     password: melodicdeath
     port: 6378
+
 #  jpa:
 #    hibernate:
 #      ddl-auto: none

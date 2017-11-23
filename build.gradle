@@ -18,4 +18,5 @@ dependencies {
     compile project(":Chapter_08")
     compile project(":web-security")
     compile project(":oauth2")
+    compile project(":oauth2_2")
 }
