@@ -9,9 +9,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08_main.iml" group="Chapter_08" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Chapter_08/Chapter_08_test.iml" group="Chapter_08" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/oauth2/oauth2.iml" filepath="$PROJECT_DIR$/.idea/modules/oauth2/oauth2.iml" group="oauth2" />
-      <module fileurl="file://$PROJECT_DIR$/oauth2_2/oauth2_2.iml" filepath="$PROJECT_DIR$/oauth2_2/oauth2_2.iml" group="oauth2_2" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/oauth2_2_main.iml" filepath="$PROJECT_DIR$/.idea/modules/oauth2_2_main.iml" group="oauth2_2" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/oauth2_2_test.iml" filepath="$PROJECT_DIR$/.idea/modules/oauth2_2_test.iml" group="oauth2_2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/oauth2_2/oauth2_2.iml" filepath="$PROJECT_DIR$/.idea/modules/oauth2_2/oauth2_2.iml" group="oauth2_2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/oauth2_2/oauth2_2_main.iml" filepath="$PROJECT_DIR$/.idea/modules/oauth2_2/oauth2_2_main.iml" group="oauth2_2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/oauth2_2/oauth2_2_test.iml" filepath="$PROJECT_DIR$/.idea/modules/oauth2_2/oauth2_2_test.iml" group="oauth2_2" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/oauth2/oauth2_main.iml" filepath="$PROJECT_DIR$/.idea/modules/oauth2/oauth2_main.iml" group="oauth2" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/oauth2/oauth2_test.iml" filepath="$PROJECT_DIR$/.idea/modules/oauth2/oauth2_test.iml" group="oauth2" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springinaction-learn.iml" filepath="$PROJECT_DIR$/.idea/modules/springinaction-learn.iml" />

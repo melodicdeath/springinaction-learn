@@ -24,9 +24,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //                .withUser("user_2").password("123456").authorities("USER");
 //    }
 
-    @Autowired
-    UserDetailsService userDetailsService;
-
 //    @Bean
 //    @Override
 //    public AuthenticationManager authenticationManagerBean() throws Exception {
@@ -34,10 +31,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //        return manager;
 //    }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService);
-    }
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.userDetailsService(userDetailsService);
+//    }
 
     @Bean
     @Override
